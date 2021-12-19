@@ -1,0 +1,138 @@
+@import "colors.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  padding: 0;
+}
+.container {
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 2;
+  background-color: $white;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  ul {
+    gap: 3rem;
+    display: flex;
+    list-style-type: none;
+    color: $grayish-blue;
+  }
+}
+p {
+  color: $grayish-blue;
+  line-height: 150%;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+  margin: 0;
+}
+h1 {
+  font-size: 5.6rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+h4 {
+  font-size: 2rem;
+}
+.btn {
+  text-decoration: none;
+  padding: 1.2rem 3rem;
+  border-radius: 5rem;
+  color: $white;
+  font-size: 1.4rem;
+  &.--invite {
+    background: linear-gradient(90deg, $lime-green 0%, $bright-cyan 101.38%);
+  }
+}
+.section-hero {
+  height: 60rem;
+  background-color: $very-light-gray;
+  padding: 10rem 0;
+  .text-hero {
+    max-width: 46rem;
+    padding: 0 3rem;
+  }
+  p {
+    margin-bottom: 4rem;
+  }
+  .hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.img-hero {
+  background-image: url("/img/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .img-mockup {
+    max-width: 62rem;
+    position: relative;
+  }
+}
+.section-benefits {
+  background-color: $lightgrayish-blue;
+  padding: 5rem 0;
+  .cards-benefits-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    gap: 3rem;
+  }
+}
+.section-blog {
+  background-color: $very-light-gray;
+  padding: 5rem 0;
+  .cards-blog-wrapper {
+    margin-top: 6rem;
+    display: flex;
+    gap: 3rem;
+  }
+  img {
+    height: 24rem;
+    max-width: 100%;
+  }
+  .card-blog {
+    border-radius: 0.6rem;
+    overflow: hidden;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .card-blog-content {
+    padding: 2.5rem;
+    display: flex;
+    background-color: $white;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  address {
+    font-size: 1.3rem;
+    font-style: normal;
+    color: $grayish-blue;
+  }
+}
