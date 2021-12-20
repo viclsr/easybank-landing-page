@@ -184,4 +184,113 @@ h4 {
   font-style: normal;
   color: #9698a6;
 }
+
+footer {
+  background-color: #2d314d;
+  padding: 4rem 0;
+}
+
+footer .row,
+footer .footer-left,
+footer .footer-right,
+footer .footer-socialmedia,
+footer .col-1,
+footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-right {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .footer-right a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+footer .footer-right p {
+  font-size: 1.6rem;
+}
+
+footer .col-1 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-left {
+  gap: 10rem;
+}
+
+footer .footer-socialmedia {
+  gap: 1rem;
+}
+
+footer nav {
+  gap: 8rem;
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  gap: 1.5rem;
+  margin: unset;
+}
+
+footer nav a {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #f3f4f6;
+  text-decoration: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+footer nav a:hover {
+  color: #2ec695;
+}
+
+footer .footer-logo {
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%);
+}
+
+footer .footer-socialmedia .filter-limegreen {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+footer .footer-socialmedia .filter-limegreen:hover {
+  -webkit-filter: invert(30%) sepia(13%) saturate(2000%) hue-rotate(110deg) brightness(90%) contrast(90%);
+          filter: invert(30%) sepia(13%) saturate(2000%) hue-rotate(110deg) brightness(90%) contrast(90%);
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "_colors.scss";
 
 html {
   font-size: 62.5%;
@@ -134,5 +134,76 @@ h4 {
     font-size: 1.3rem;
     font-style: normal;
     color: $grayish-blue;
+  }
+}
+
+footer {
+  background-color: $dark-blue;
+  padding: 4rem 0;
+
+  .row,
+  .footer-left,
+  .footer-right,
+  .footer-socialmedia,
+  .col-1,
+  nav {
+    display: flex;
+  }
+  .footer-right {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    a {
+      width: fit-content;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  .col-1 {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .row {
+    justify-content: space-between;
+  }
+  .footer-left {
+    gap: 10rem;
+  }
+  .footer-socialmedia {
+    gap: 1rem;
+  }
+  nav {
+    gap: 8rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      gap: 1.5rem;
+      margin: unset;
+    }
+    a {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: $lightgrayish-blue;
+      text-decoration: none;
+      transition: 0.4s;
+      &:hover {
+        color: #2ec695;
+      }
+    }
+  }
+  .footer-logo {
+    filter: brightness(1000%);
+  }
+  .footer-socialmedia {
+    .filter-limegreen {
+      transition: 0.4s;
+      cursor: pointer;
+      &:hover {
+        filter: invert(30%) sepia(13%) saturate(2000%) hue-rotate(110deg)
+          brightness(90%) contrast(90%);
+      }
+    }
   }
 }
