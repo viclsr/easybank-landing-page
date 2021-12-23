@@ -16,7 +16,28 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
 header {
   position: fixed;
   width: 100%;
@@ -75,7 +96,6 @@ h4 {
   padding: 10rem 0;
   .text-hero {
     max-width: 46rem;
-    padding: 0 3rem;
   }
   p {
     margin-bottom: 4rem;
@@ -97,10 +117,20 @@ h4 {
 .section-benefits {
   background-color: $lightgrayish-blue;
   padding: 5rem 0;
+  text-align: center;
   .cards-benefits-wrapper {
     margin-top: 4rem;
     display: flex;
     gap: 3rem;
+  }
+  .card-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    img {
+      max-width: 8rem;
+    }
   }
 }
 .section-blog {
@@ -204,6 +234,94 @@ footer {
         filter: invert(30%) sepia(13%) saturate(2000%) hue-rotate(110deg)
           brightness(90%) contrast(90%);
       }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  header,
+  .section-hero {
+    display: none;
+  }
+  .section-benefits {
+    h2 {
+      margin-bottom: 4rem;
+    }
+    .cards-benefits-wrapper {
+      margin-top: 6rem;
+      gap: 5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card-benefits {
+      text-align: center;
+    }
+  }
+  .section-blog {
+    .cards-blog-wrapper {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .card-blog {
+      width: 45%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  footer {
+    background-color: $dark-blue;
+    padding: 4rem 0;
+    nav {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .row {
+      gap: 4rem;
+    }
+    .row,
+    .footer-left {
+      flex-direction: column;
+    }
+    .footer-left,
+    .footer-right,
+    .col-1 {
+      gap: 3.5rem;
+      align-items: center;
+    }
+    nav {
+      ul {
+        padding: unset;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    text-align: center;
+  }
+  .section-blog {
+    .cards-blog-wrapper {
+      justify-content: center;
+    }
+    .card-blog {
+      width: 60%;
+    }
+    img {
+      height: unset;
+    }
+  }
+}
+@media screen and (max-width: 475px) {
+  h2 {
+    text-align: center;
+  }
+  .section-blog {
+    .cards-blog-wrapper {
+      margin-top: 3.5rem;
+    }
+    .card-blog {
+      width: 100%;
     }
   }
 }

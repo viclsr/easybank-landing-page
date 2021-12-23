@@ -16,6 +16,30 @@ body {
   margin-left: auto;
 }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -96,7 +120,6 @@ h4 {
 
 .section-hero .text-hero {
   max-width: 46rem;
-  padding: 0 3rem;
 }
 
 .section-hero p {
@@ -126,6 +149,7 @@ h4 {
 .section-benefits {
   background-color: #f3f4f6;
   padding: 5rem 0;
+  text-align: center;
 }
 
 .section-benefits .cards-benefits-wrapper {
@@ -134,6 +158,24 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
+}
+
+.section-benefits .card-benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-benefits .card-benefits img {
+  max-width: 8rem;
 }
 
 .section-blog {
@@ -292,5 +334,102 @@ footer .footer-socialmedia .filter-limegreen {
 footer .footer-socialmedia .filter-limegreen:hover {
   -webkit-filter: invert(30%) sepia(13%) saturate(2000%) hue-rotate(110deg) brightness(90%) contrast(90%);
           filter: invert(30%) sepia(13%) saturate(2000%) hue-rotate(110deg) brightness(90%) contrast(90%);
+}
+
+@media screen and (max-width: 1000px) {
+  header,
+  .section-hero {
+    display: none;
+  }
+  .section-benefits h2 {
+    margin-bottom: 4rem;
+  }
+  .section-benefits .cards-benefits-wrapper {
+    margin-top: 6rem;
+    gap: 5rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section-benefits .card-benefits {
+    text-align: center;
+  }
+  .section-blog .cards-blog-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section-blog .card-blog {
+    width: 45%;
+  }
+  .section-blog img {
+    width: 100%;
+  }
+  footer {
+    background-color: #2d314d;
+    padding: 4rem 0;
+  }
+  footer nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+  }
+  footer .row {
+    gap: 4rem;
+  }
+  footer .row,
+  footer .footer-left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-left,
+  footer .footer-right,
+  footer .col-1 {
+    gap: 3.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer nav ul {
+    padding: unset;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    text-align: center;
+  }
+  .section-blog .cards-blog-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section-blog .card-blog {
+    width: 60%;
+  }
+  .section-blog img {
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  h2 {
+    text-align: center;
+  }
+  .section-blog .cards-blog-wrapper {
+    margin-top: 3.5rem;
+  }
+  .section-blog .card-blog {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
