@@ -55,6 +55,13 @@ header {
     list-style-type: none;
     color: $grayish-blue;
   }
+  a {
+    text-decoration: none;
+    color: $grayish-blue;
+  }
+  #btn-mobile {
+    display: none;
+  }
 }
 p {
   color: $grayish-blue;
@@ -104,16 +111,17 @@ h4 {
     display: flex;
     justify-content: space-between;
   }
-}
-.img-hero {
-  background-image: url("/img/bg-intro-desktop.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  .img-mockup {
-    max-width: 62rem;
-    position: relative;
+  .img-hero {
+    background-image: url("/img/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .img-mockup {
+      max-width: 62rem;
+      position: relative;
+    }
   }
 }
+
 .section-benefits {
   background-color: $lightgrayish-blue;
   padding: 5rem 0;
@@ -238,9 +246,132 @@ footer {
   }
 }
 @media screen and (max-width: 1000px) {
-  header,
+  header {
+    padding: 2.5rem 0;
+    .btn {
+      display: none;
+    }
+    .menu {
+      right: 0;
+      top: 5rem;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-list {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      top: 10rem;
+      padding: unset;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      transition: 0.5s;
+      z-index: 1000;
+      height: 0;
+      box-sizing: border-box;
+      visibility: hidden;
+      overflow-y: hidden;
+    }
+    .nav-menu {
+      display: flex;
+    }
+    .nav-menu.active .menu-list {
+      height: 30rem;
+      visibility: visible;
+      overflow-y: auto;
+    }
+
+    .menu-list a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      color: black;
+    }
+
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      font-size: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      gap: 1.5rem;
+      position: absolute;
+      right: 0;
+      top: 2.2rem;
+    }
+
+    #hamburguer {
+      border-top: 2px solid black;
+      width: 30px;
+    }
+
+    #hamburguer::before,
+    #hamburguer::after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 2px;
+      margin-top: 5px;
+      border-top: 5px;
+      background-color: black;
+      transition: 0.5s ease;
+    }
+
+    .nav-menu.active #hamburguer {
+      border-top: transparent;
+    }
+
+    .nav-menu.active #hamburguer::before {
+      transform: rotate(135deg);
+    }
+
+    .nav-menu.active #hamburguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
   .section-hero {
-    display: none;
+    height: unset;
+    .hero-wrapper {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .text-hero {
+      gap: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 40rem;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+    h1 {
+      font-size: 4.6rem;
+    }
+    .img-hero {
+      max-width: 100%;
+      background-position-y: center;
+      display: flex;
+      justify-content: center;
+      .img-mockup {
+        top: -13rem;
+        position: relative;
+        max-width: 40rem;
+      }
+    }
   }
   .section-benefits {
     h2 {
@@ -299,6 +430,11 @@ footer {
 @media screen and (max-width: 768px) {
   h2 {
     text-align: center;
+  }
+  .section-hero,
+  .section-benefits,
+  .section-blog {
+    padding: 8rem 0;
   }
   .section-blog {
     .cards-blog-wrapper {

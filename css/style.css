@@ -69,6 +69,15 @@ header ul {
   color: #9698a6;
 }
 
+header a {
+  text-decoration: none;
+  color: #9698a6;
+}
+
+header #btn-mobile {
+  display: none;
+}
+
 p {
   color: #9698a6;
   line-height: 150%;
@@ -135,13 +144,13 @@ h4 {
           justify-content: space-between;
 }
 
-.img-hero {
+.section-hero .img-hero {
   background-image: url("/img/bg-intro-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.img-hero .img-mockup {
+.section-hero .img-hero .img-mockup {
   max-width: 62rem;
   position: relative;
 }
@@ -337,9 +346,166 @@ footer .footer-socialmedia .filter-limegreen:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  header,
-  .section-hero {
+  header {
+    padding: 2.5rem 0;
+  }
+  header .btn {
     display: none;
+  }
+  header .menu {
+    right: 0;
+    top: 5rem;
+  }
+  header .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    padding: unset;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 1000;
+    height: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  header .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .nav-menu.active .menu-list {
+    height: 30rem;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  header .menu-list a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    color: black;
+  }
+  header #btn-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 2.2rem;
+  }
+  header #hamburguer {
+    border-top: 2px solid black;
+    width: 30px;
+  }
+  header #hamburguer::before,
+  header #hamburguer::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    margin-top: 5px;
+    border-top: 5px;
+    background-color: black;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  header .nav-menu.active #hamburguer {
+    border-top: transparent;
+  }
+  header .nav-menu.active #hamburguer::before {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  header .nav-menu.active #hamburguer::after {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+    top: -7px;
+  }
+  .section-hero {
+    height: unset;
+  }
+  .section-hero .hero-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-hero .text-hero {
+    gap: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 40rem;
+    text-align: center;
+  }
+  .section-hero p {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  .section-hero h1 {
+    font-size: 4.6rem;
+  }
+  .section-hero .img-hero {
+    max-width: 100%;
+    background-position-y: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section-hero .img-hero .img-mockup {
+    top: -13rem;
+    position: relative;
+    max-width: 40rem;
   }
   .section-benefits h2 {
     margin-bottom: 4rem;
@@ -407,6 +573,11 @@ footer .footer-socialmedia .filter-limegreen:hover {
 @media screen and (max-width: 768px) {
   h2 {
     text-align: center;
+  }
+  .section-hero,
+  .section-benefits,
+  .section-blog {
+    padding: 8rem 0;
   }
   .section-blog .cards-blog-wrapper {
     -webkit-box-pack: center;
